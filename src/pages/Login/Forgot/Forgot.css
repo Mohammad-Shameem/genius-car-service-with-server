@@ -1,0 +1,35 @@
+.forgot img {
+    width: 100vh;
+
+}
+
+.forgot {
+    position: relative;
+}
+
+.forgot-text {
+    color: black;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    bottom: 18%;
+    left: 11%;
+    font-size: 5px;
+
+}
+
+
+
+.login-button {
+    text-decoration: none;
+    font-weight: 700;
+    color: #FFFF;
+    position: absolute;
+    background-color: green;
+    top: 84%;
+    right: 35%;
+    padding: 8px 30px;
+    border: none;
+    cursor: pointer;
+
+}

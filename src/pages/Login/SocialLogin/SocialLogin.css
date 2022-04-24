@@ -1,0 +1,22 @@
+.google-btn {
+    border: 2px solid paleturquoise;
+    background-color: #FFFF;
+    box-shadow: 5px 5px paleturquoise;
+}
+
+.button-div {
+    display: flex;
+}
+
+.facebook-btn {
+    border: 2px solid #405A93;
+    box-shadow: 5px 5px #405A93;
+    background-color: #FFFF
+}
+
+.github-icon {
+    border: none;
+    background-color: black;
+    color: #FFFF;
+
+}
