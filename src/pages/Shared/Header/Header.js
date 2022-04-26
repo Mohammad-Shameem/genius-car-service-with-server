@@ -33,7 +33,6 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/home">Home</Nav.Link>
                         <Nav.Link href="/home#services">Services</Nav.Link>    {/* amra jodi ekta page e thaki ebong ekta kichute click korle seta amader page er jekhane amra jete chai sekhane jump korbe tahole setake ekta id dite hobe ebong setart id ta href er moddhe dite hobe.mane kono ekta section theke arekta section e jump mara.eta html o react sob jaygay same . */}
                         <Nav.Link href="/home#experts">Experts</Nav.Link>
                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
@@ -47,8 +46,17 @@ const Header = () => {
 
                 </Navbar.Collapse>
                 <Nav>
+                    <Nav.Link as={CustomLink} to="/home">Home</Nav.Link>
                     {
-                        user ? <button onClick={handleSignOut} className="signout-btn">Sign Out</button>
+                        user ?
+                            <>
+                                <Nav.Link as={CustomLink} to={"/addservice"}>Add</Nav.Link>
+                                <Nav.Link as={CustomLink} to={"/manageservice"}>Manage</Nav.Link>
+                            </>
+                            : ''
+                    }
+                    {
+                        user ? <div className='signout-btn-div'><button onClick={handleSignOut} className="signout-btn" title='you will be sign out'>Sign Out</button></div>
                             : <Nav.Link as={CustomLink} to={"/login"}>Login</Nav.Link>
                     }
 

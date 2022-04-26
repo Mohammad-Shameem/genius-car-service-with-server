@@ -14,7 +14,7 @@ const Experts = () => {
         { id: 3, name: 'Babar Azam', img: expert3 },
         { id: 4, name: 'Dwayne Smith', img: expert4 },
         { id: 5, name: 'Dwyane Bravo', img: expert5 },
-        { id: 6, name: 'Hashi Amla', img: expert6 }
+        { id: 6, name: 'Hashim Amla', img: expert6 }
     ]
     return (
         <div id='experts' className="container">

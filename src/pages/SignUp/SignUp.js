@@ -5,6 +5,7 @@ import auth from '../../firebase.init';
 import './SignUp.css'
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import Loading from '../Shared/Loading/Loading';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false);
@@ -31,8 +32,11 @@ const SignUp = () => {
     if (user) {
         navigate("/home")
     }
+
+    console.log(user)
     return (
         <div className='register-form'>
+            <PageTitle title="Sign Up"></PageTitle>
             <h2 className='p-5 '>Sign Up</h2>
             <form onSubmit={handleSignUpFormSubmit}>
                 <input type="text" name="name" id="" placeholder='your Name' />

@@ -2,10 +2,12 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './pages/About/About';
+import AddService from './pages/AddService/AddService';
 import CheckOut from './pages/CheckOut/CheckOut/CheckOut';
 import Home from './pages/Home/Home/Home';
 import Forgot from './pages/Login/Forgot/Forgot';
 import Login from './pages/Login/Login';
+import ManageServices from './pages/ManageServices/ManageServices';
 import NotFound from './pages/NotFound/NotFound';
 import ServiceDetails from './pages/ServiceDetails/ServiceDetails';
 import Footer from './pages/Shared/Footer/Footer';
@@ -27,15 +29,25 @@ function App() {
             <CheckOut />
           </RequireAuth>}></Route>
 
+        <Route path='/manageservice' element={
+          <RequireAuth>
+            <ManageServices />
+          </RequireAuth>}></Route>
+
+        <Route path='/addservice' element={
+          <RequireAuth>
+            <AddService />
+          </RequireAuth>}></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/forgot' element={<Forgot></Forgot>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route></Route>
-      </Routes>
+      </Routes >
       <Footer></Footer>
-    </div>
+    </div >
   );
 }
 
